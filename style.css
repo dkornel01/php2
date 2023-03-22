@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#elso{
+    font-weight: bold;
+}
