@@ -20,11 +20,10 @@
             $masodikSzint="társadalom";
             $harmadikSzint="Gazdaság";
             $negyedikSzint="pénz";
-            $szoveg=["A megújuló erőforrások fogyasztása","A környezet helyzete","Fenntarthatóság"];
-            $szoveg2=["több, mint amit a természet újratermelni képes","a környezet pusztul","nem fenntartható"];
-            $szoveg3=["a természet újratermelő kapacitásával azonos mértékű","környezeti egyensúly","fenntartható, nem változó állapot"];
-            $szoveg4=["kevesebb, mint amit a természet újratermelni képes","a környezet megújul","fenntartható fejlődés"];
-            $mind=[$szoveg,$szoveg2,$szoveg3,$szoveg4];
+            $szoveg5=["A megújuló erőforrások fogyasztása","több, mint amit a természet újratermelni képes","a természet újratermelő kapacitásával azonos mértékű","kevesebb, mint amit a természet újratermelni képes"];
+            $szoveg6=["A környezet helyzete","a környezet pusztul","környezeti egyensúly","a környezet megújul"];
+            $szoveg7=["Fenntarthatóság","nem fenntartható","fenntartható, nem változó állapot","fenntartható fejlődés"];
+            $mind2=[$szoveg5,$szoveg6,$szoveg7];
             $id=["elso","masodik","harmadik","negyedik"];
             echo "<ul>";
             echo "<li>$elsoSzint</li>";
@@ -37,10 +36,16 @@
         </main>
         <?php
         echo "<table class='tablazat'>";
-        for ($i=0; $i < 3; $i++) {
-            for ($x=0; $x < 4 ; $x++) { 
-                $tarolo=$mind[$x];
-                echo "<td>$tarolo[$i]</td>";
+        for ($i=0; $i < 4; $i++) {
+            for ($x=0; $x < 3 ; $x++) { 
+                $tarolo=$mind2[$x];
+                if ($i==0) {
+                    echo "<td id='bold'>$tarolo[$i]</td>";
+                }
+                else{
+                    echo "<td>$tarolo[$i]</td>";
+                }
+                    
             }
             echo "</tr>";
         }
