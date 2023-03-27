@@ -36,11 +36,11 @@
         </div>
         </main>
         <?php
-        echo "<table>";
-        for ($i=0; $i < 3; $i++) { 
-            echo "<tr id=$id[$i]>";
-            for ($x=0; $x < 3 ; $x++) { 
-                echo "<td>$szoveg[$i]</td>";
+        echo "<table class='tablazat'>";
+        for ($i=0; $i < 3; $i++) {
+            for ($x=0; $x < 4 ; $x++) { 
+                $tarolo=$mind[$x];
+                echo "<td>$tarolo[$i]</td>";
             }
             echo "</tr>";
         }
